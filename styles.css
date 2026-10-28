@@ -1,0 +1,18 @@
+/* ==========================================
+   1. GLOBAL STYLES - Variables
+   ========================================== */
+:root {
+  --color-primary-dark: #1f2937;
+  --color-primary-light: #e5e7eb;
+  --color-primary-lighter: #f9faf8;
+  --color-secondary: #3882f6;
+
+  --bg-header-hero-footer: var(--color-primary-dark);
+  --bg-button-cta-: var(--color-secondary);
+  --bg-quote: var(--color-primary-light);
+  --text-logo: var(--color-primary-lighter);
+  --text-hero-main: var(--color-primary-lighter);
+  --text-hero-sec: var(--color-primary-light);
+  --text-info-heading: var(--color-primary-dark);
+  --text-quote: var(--color-primary-dark);
+}
