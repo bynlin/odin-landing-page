@@ -3,7 +3,8 @@
    ========================================== */
 :root {
   --color-primary-dark: #1f2937;
-  --color-primary-light: #e5e7eb;
+  --color-primary-med: #aeb2bd;
+  --color-primary-light: #cacdd5;
   --color-primary-lighter: #f9faf8;
   --color-secondary: #3882f6;
 
@@ -13,7 +14,7 @@
 
   --text-logo: var(--color-primary-lighter);
   --text-hero-main: var(--color-primary-lighter);
-  --text-hero-sec: var(--color-primary-light);
+  --text-hero-sec: var(--color-primary-med);
   --text-info-heading: var(--color-primary-dark);
   --text-quote: var(--color-primary-dark);
 }
@@ -103,19 +104,46 @@ body {
   display: flex;
   padding-block: 1rem;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
 /* ===== Hero ===== */
 .hero {
   color: var(--text-hero-main);
   display: flex;
+  padding-block: 5rem;
+  gap: 2.5rem;
 }
 .hero p {
   color: var(--text-hero-sec);
 }
 .hero .details {
-  flex-grow: 2;
+  flex: 1 1 0;
 }
-
+.hero figure {
+  flex: 1 1 0;
+  min-width: 0; /* lets the column shrink below the image's natural width */
+  margin: 0; /* removes the browser's default figure margins*/
+}
+/* Make the image behave like a flexible layer instead of a fixed-size picture */
+.hero img {
+  /* without this, the image doesn't shrink when parent shrinks */
+  /* max-width: 100% stops the image from overflowing, so it shrinks to fit */
+  max-width: 100%;
+  /* without this, the width shrinks but the height doesn't */
+  /* height: auto; scales the height in proportion */
+  height: auto;
+  /* without this there may be a tiny stray gap at the bottom of image */
+  display: block;
+}
+figcaption {
+  color: var(--color-primary-med);
+  font-weight: 300;
+  font-style: italic;
+}
 /* ===== Quote ===== */
 blockquote {
   display: flex;
