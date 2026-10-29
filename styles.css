@@ -7,6 +7,7 @@
   --color-primary-light: #cacdd5;
   --color-primary-lighter: #f9faf8;
   --color-secondary: #3882f6;
+  --color-secondary-dark: #2874ef;
 
   --bg-header-hero-footer: var(--color-primary-dark);
   --bg-button-cta: var(--color-secondary);
@@ -82,12 +83,17 @@ button {
   margin-inline: auto;
   padding-inline: 1rem;
 }
+.container.bubble {
+  background-color: var(--color-secondary);
+  border-radius: 0.5rem;
+  margin-block: 5rem;
+  padding-block: 3rem;
+}
 
 /* ==========================================
-   4. Elements
+   4. Background Colors
    ========================================== */
 
-/* ===== Background colors ===== */
 .dark-bg {
   background-color: var(--bg-header-hero-footer);
 }
@@ -97,8 +103,13 @@ button {
 .grey-bg {
   background-color: var(--color-primary-light);
 }
+.bubble-bg {
+  color: var(--color-primary-lighter);
+}
 
-/* ===== Header ===== */
+/* ==========================================
+   5. Header
+   ========================================== */
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -123,6 +134,9 @@ header {
   z-index: 10;
 }
 
+/* ==========================================
+   6. Button
+   ========================================== */
 button {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1rem;
@@ -130,6 +144,10 @@ button {
   border-radius: 0.5em;
   padding: 0.8em 3em;
   background-color: var(--bg-button-cta);
+}
+button:hover,
+button:focus-visible {
+  background-color: var(--color-secondary-dark);
 }
 .fill {
   color: var(--color-primary-lighter);
@@ -139,11 +157,13 @@ button {
   color: var(--color-primary-lighter);
 }
 
-/* ===== Hero ===== */
+/* ==========================================
+   7. Hero
+   ========================================== */
 .hero {
   color: var(--text-hero-main);
   display: flex;
-  padding-block: 5rem;
+  padding-block: 7rem;
   gap: 2.5rem;
 }
 .hero p {
@@ -174,10 +194,13 @@ button {
 }
 figcaption {
   color: var(--color-primary-med);
+  font-size: 0.875rem;
   font-weight: 300;
   font-style: italic;
 }
-/* ===== Quote ===== */
+/* ==========================================
+   8. Quote
+   ========================================== */
 blockquote {
   display: flex;
   flex-direction: column;
@@ -188,10 +211,41 @@ blockquote {
   color: var(--text-quote);
   font-weight: 300;
   font-style: italic;
+  padding-block: 8rem;
 }
 blockquote footer {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   align-self: flex-end;
+  color: var(--color-primary-dark);
+}
+
+/* ==========================================
+   9. Bubble - CTA
+   ========================================== */
+/* CTA contents has an inner constraint of max 51rem as well */
+.cta-contents {
+  /* Set this layout constraint container to be the same as .container-narrow */
+  max-width: 51rem;
+  /* Center horizontally */
+  margin-inline: auto;
+  /* Arrange children in a flex row */
+  display: flex;
+  /* Position children to both left and right edges */
+  justify-content: space-between;
+  /* Set space between cta-text and button */
+  gap: 1rem;
+}
+
+/* ==========================================
+   10. Footer
+   ========================================== */
+footer {
+  color: var(--text-hero-sec);
+  padding: 2.5rem;
+  /*Centralise content on both axis*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
