@@ -254,6 +254,8 @@ blockquote footer {
   gap: 1rem;
   /* Add flex-wrap */
   flex-wrap: wrap;
+  /* Ensure button does not increase in height when text increases in height */
+  align-items: flex-end;
 }
 a.btn.border {
   flex: 1 0 3rem;
