@@ -137,21 +137,26 @@ header {
 /* ==========================================
    6. Button
    ========================================== */
-button {
+
+.btn {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 0.5em;
   padding: 0.8em 3em;
   background-color: var(--bg-button-cta);
+  transition: background-color 0.2s ease-in-out 0.1s;
 }
-button:hover,
-button:focus-visible {
+
+.btn:hover,
+.btn:focus-visible {
   background-color: var(--color-secondary-dark);
 }
+
 .fill {
   color: var(--color-primary-lighter);
 }
+
 .border {
   border: 2px solid var(--color-primary-lighter);
   color: var(--color-primary-lighter);
