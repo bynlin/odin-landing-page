@@ -52,6 +52,19 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1rem;
 }
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 /* ==========================================
    3. Layout Constraints
@@ -110,6 +123,22 @@ header {
   z-index: 10;
 }
 
+button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5em;
+  padding: 0.8em 3em;
+  background-color: var(--bg-button-cta);
+}
+.fill {
+  color: var(--color-primary-lighter);
+}
+.border {
+  border: 2px solid var(--color-primary-lighter);
+  color: var(--color-primary-lighter);
+}
+
 /* ===== Hero ===== */
 .hero {
   color: var(--text-hero-main);
@@ -122,6 +151,10 @@ header {
 }
 .hero .details {
   flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
 }
 .hero figure {
   flex: 1 1 0;
