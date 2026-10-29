@@ -170,19 +170,25 @@ header {
   display: flex;
   padding-block: 7rem;
   gap: 2.5rem;
+  /* Add */
+  flex-wrap: wrap;
 }
 .hero p {
   color: var(--text-hero-sec);
 }
 .hero .details {
-  flex: 1 1 0;
+  /* Changed from flex: 1 1 0
+  so that flex-wrap can happen on mobile */
+  flex: 1 0 18.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   align-items: flex-start;
 }
 .hero figure {
-  flex: 1 1 0;
+  /* Changed from flex: 1 1 0
+  so that flex-wrap can happen on mobile */
+  flex: 1 0 18.75rem;
   min-width: 0; /* lets the column shrink below the image's natural width */
   margin: 0; /* removes the browser's default figure margins*/
 }
