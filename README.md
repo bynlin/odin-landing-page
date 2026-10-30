@@ -22,11 +22,11 @@ Part 2: Use 'layout constraints' method to size and position sections:
 
 Part 3: Sort through the wrapping:
 
-1. A wrapper of background color wraps up the entire section (so that the background color fills viewport instead)
-2. Next nested wrapper: layout container (.container) wraps
-3. Next nested wrapper: section to group the contents, act as a parent
-4. Next nested wrapper: individual children items
-   These wrappings confused me to no end... I'm sure there're better ways to do this, but I just don't know what I don't know yet.
+1. A wrapper of background color wraps up the entire section, so that the background color fills viewport instead; aka full-width backgroun
+2. Next nested wrapper: layout container (.container) wraps; aka Centered Layout Container
+3. Next nested wrapper: section to group the contents, act as a parent; aka Flex Parent Component
+4. Next nested wrapper: individual children items; aka Individual children
+   These wrappings confuses me to no end... I'm sure there're better ways to do this, but I just don't know what I don't know yet.
 
 Part 4: Deciphering how I should add classes & write selectors to target the elements:
 
